@@ -10,7 +10,7 @@ const connect = function () {
   conn.setEncoding("utf8");
   //send message to console to confirm connection to server
   conn.on("connect", () => {
-    console.log("You're now connected!");
+    console.log("Successfully connected to game server!");
   });
   //handle incoming data upon connection
   conn.on("data", (data) => {
