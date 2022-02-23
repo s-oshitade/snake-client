@@ -1,3 +1,5 @@
+const { IP, PORT, MOVE_UP_KEY, MOVE_DOWN_KEY, MOVE_RIGHT_KEY, MOVE_LEFT_KEY,DISPLAY_MESSAGE } = require("./constants");
+
 let connection;
 const stdin = process.stdin;
 
@@ -13,29 +15,22 @@ const handleUserInput = ('data', (key) => {
     if (key === "\u0003") { // \u0003 maps to ctrl+c input
       process.exit();
     }
-    if (key === "w") {
+    if (key === MOVE_UP_KEY) {
       connection.write("Move: up");
     }
-    if (key === "a") {
+    if (key === MOVE_LEFT_KEY) {
       connection.write("Move: left");
     }
-    if (key === "s") {
+    if (key === MOVE_DOWN_KEY) {
       connection.write("Move: down");
     }
-    if (key === "d") {
+    if (key === MOVE_RIGHT_KEY) {
       connection.write("Move: right");
     }
-    if (key === "z"){
-      connection.write('Say: Ssssssss');
-    }
-    if (key === "x"){
-      connection.write('Say: Ready or not?!');
-    }
-    if (key === "c"){
-      connection.write('Say: Here I come...!!!')
-    }
-    if (key === "y"){
-      connection.write('Say: Yes!!!')
+    for(const input in DISPLAY_MESSAGE){
+      if (input === key){
+        connection.write(`${DISPLAY_MESSAGE[input]}`);
+      }
     }
 });
 
