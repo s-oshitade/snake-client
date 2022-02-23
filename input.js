@@ -1,4 +1,4 @@
-const { IP, PORT, MOVE_UP_KEY, MOVE_DOWN_KEY, MOVE_RIGHT_KEY, MOVE_LEFT_KEY,DISPLAY_MESSAGE } = require("./constants");
+const { MOVE_UP_KEY, MOVE_DOWN_KEY, MOVE_RIGHT_KEY, MOVE_LEFT_KEY,DISPLAY_MESSAGE } = require("./constants");
 
 let connection;
 const stdin = process.stdin;
