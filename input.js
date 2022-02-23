@@ -1,26 +1,30 @@
-const setupInput = function () {
-  const stdin = process.stdin;
+let connection;
+const stdin = process.stdin;
+
+const setupInput = function (conn) {
+  connection = conn;
   stdin.setRawMode(true);
   stdin.setEncoding("utf8");
   stdin.resume();
   stdin.on("data", handleUserInput);
   return stdin; //the returned stdin object will allow client to listen for keyboard input and react to it accordingly
 };
-const handleUserInput = function () {
-  stdin.on("data", (key) => {
-    if (key === "\u0003") {
-      // \u0003 maps to ctrl+c input
+const handleUserInput = ('data', (key) => {
+    if (key === "\u0003") { // \u0003 maps to ctrl+c input
       process.exit();
     }
-    if (key === "placeholder") {
+    if (key === "w") {
+      connection.write("Move: up");
     }
-    if (key === "placeholder") {
+    if (key === "a") {
+      connection.write("Move: left");
     }
-    if (key === "placeholder") {
+    if (key === "s") {
+      connection.write("Move: down");
     }
-    if (key === "placeholder") {
+    if (key === "d") {
+      connection.write("Move: right");
     }
-  });
-};
+});
 
 module.exports = { setupInput }
