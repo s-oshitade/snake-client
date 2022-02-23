@@ -22,3 +22,5 @@ const handleUserInput = function () {
     }
   });
 };
+
+module.exports = { setupInput }
