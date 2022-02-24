@@ -1,4 +1,3 @@
-const NAME = "Name: SO"; //@TODO: Update NAME to receive input via user interface such as form/ prompt/ command line argument
 const PLAYER_INITIALS = process.argv.slice(2);
 const IP = "10.0.2.15";
 const PORT = 50541;
@@ -15,7 +14,6 @@ const DISPLAY_MESSAGE = {
 
 module.exports = {
   PLAYER_INITIALS,
-  NAME,
   IP,
   PORT,
   MOVE_UP_KEY,
