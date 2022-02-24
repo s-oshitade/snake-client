@@ -1,4 +1,4 @@
-//Module for capturing all user inputs. Exports object setupInput
+//Module for capturing all user inputs. Exports the object setupInput
 const { MOVE_UP_KEY, MOVE_DOWN_KEY, MOVE_RIGHT_KEY, MOVE_LEFT_KEY,DISPLAY_MESSAGE } = require("./constants");
 
 let connection;

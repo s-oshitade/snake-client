@@ -1,4 +1,4 @@
-//Sets out all constant values and command for receiving player initials. Exports objects containing variables that point to constants.
+//Sets out all constant values and command for receiving player initials. Exports objects containing variables that point to constants
 const PLAYER_INITIALS = process.argv.slice(2);
 const IP = "10.0.2.15";
 const PORT = 50541;
